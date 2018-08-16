@@ -1,0 +1,25 @@
+{
+    "name": "wti/feedbackform",
+    "description": "This will send email to admin and save contact query in database",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Suneel Kumar Rajpoot",
+            "email": "suneelweb15@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "Wti\\FeedbackForm\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Wti\\FeedbackForm\\FeedbackServiceProvider"
+            ]
+        }
+    }
+}
