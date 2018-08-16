@@ -15,6 +15,15 @@ class FeedbackServiceProvider extends ServiceProvider
     {
         $this->loadRoutesFrom(__DIR__ . '/routes/web.php');
         $this->loadViewsFrom(__DIR__.'/resources/views', 'feedbackform');
+        $this->loadMigrationsFrom(__DIR__.'/database/migrations');   
+        $this->mergeConfigFrom(
+            __DIR__ . '/config/feedback.php',
+            'feedback'
+        );
+        $this->publishes([
+            __DIR__ . '/config/feedback.php' => config_path('feedback.php'),
+            __DIR__ . '/resources' => resource_path('resources/views/feedback')
+        ]);
     }
 
     /**
